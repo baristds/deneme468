@@ -4,19 +4,13 @@ import subprocess
 import os
 import time
 import boto3
-import requests
-
-# Your code using the 'requests' module goes here
-
 
 app = Flask(__name__)
-
 
 # Route to serve HTML page
 @app.route('/')
 def index():
     return render_template('index.html')
-
 
 # Route to perform speed test
 @app.route('/speed-test', methods=['POST'])
@@ -42,7 +36,6 @@ def speed_test():
         'upload_speed': upload_speed
     })
 
-
 # Function to measure ping time
 def measure_ping():
     try:
@@ -51,7 +44,6 @@ def measure_ping():
         return ping_data
     except subprocess.TimeoutExpired:
         return 'Ping request timed out.'
-
 
 def measure_download_speed(urls):
     try:
