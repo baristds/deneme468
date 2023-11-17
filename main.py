@@ -98,4 +98,5 @@ def upload_to_s3(file_paths, bucket_name):
     return uploaded_data, upload_speed
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0",port=5000,debug=True)
+    
