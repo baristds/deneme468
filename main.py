@@ -4,6 +4,10 @@ import subprocess
 import os
 import time
 import boto3
+import requests
+
+# Your code using the 'requests' module goes here
+
 
 app = Flask(__name__)
 
